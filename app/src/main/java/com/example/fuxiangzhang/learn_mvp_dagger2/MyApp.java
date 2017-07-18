@@ -2,10 +2,10 @@ package com.example.fuxiangzhang.learn_mvp_dagger2;
 
 import android.app.Application;
 
-import com.example.fuxiangzhang.learn_mvp_dagger2.mvp.AppModule;
+import com.example.fuxiangzhang.learn_mvp_dagger2.di.AppModule;
 import com.example.fuxiangzhang.learn_mvp_dagger2.mvp.DaggerNetComponent;
-import com.example.fuxiangzhang.learn_mvp_dagger2.mvp.NetComponent;
-import com.example.fuxiangzhang.learn_mvp_dagger2.mvp.NetModule;
+import com.example.fuxiangzhang.learn_mvp_dagger2.di.NetComponent;
+import com.example.fuxiangzhang.learn_mvp_dagger2.di.NetModule;
 
 /**
  * Created by Fuxiang.Zhang on 2017/7/14.

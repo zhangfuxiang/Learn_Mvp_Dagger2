@@ -1,4 +1,4 @@
-package com.example.fuxiangzhang.learn_mvp_dagger2.mvp;
+package com.example.fuxiangzhang.learn_mvp_dagger2.di;
 
 import android.app.Application;
 import android.content.SharedPreferences;
@@ -9,6 +9,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -53,10 +54,19 @@ public class NetModule {
     }
 
     @Provides
+    @Named("cached")
     @Singleton
     OkHttpClient provideOkHttpClient(Cache cache) {
         OkHttpClient client=new OkHttpClient();
         client.cache();
+        return client;
+    }
+
+    @Provides
+    @Named("non_cached")
+    @Singleton
+    OkHttpClient provideOkHttpClient() {
+        OkHttpClient client = new OkHttpClient();
         return client;
     }
 
