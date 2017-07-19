@@ -1,4 +1,4 @@
-package com.example.fuxiangzhang.learn_mvp_dagger2.di;
+package com.example.fuxiangzhang.learn_mvp_dagger2.base.di;
 
 import android.app.Application;
 import android.content.SharedPreferences;
@@ -53,17 +53,15 @@ public class NetModule {
         return gsonBuilder.create();
     }
 
-    @Provides
+/*    @Provides
     @Named("cached")
-    @Singleton
     OkHttpClient provideOkHttpClient(Cache cache) {
         OkHttpClient client=new OkHttpClient();
         client.cache();
         return client;
-    }
+    }*/
 
     @Provides
-    @Named("non_cached")
     @Singleton
     OkHttpClient provideOkHttpClient() {
         OkHttpClient client = new OkHttpClient();

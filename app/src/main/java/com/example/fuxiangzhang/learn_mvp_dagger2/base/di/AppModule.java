@@ -1,4 +1,4 @@
-package com.example.fuxiangzhang.learn_mvp_dagger2.di;
+package com.example.fuxiangzhang.learn_mvp_dagger2.base.di;
 
 import android.app.Application;
 

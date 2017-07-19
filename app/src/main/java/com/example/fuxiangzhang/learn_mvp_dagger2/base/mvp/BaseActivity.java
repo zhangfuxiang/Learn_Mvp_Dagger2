@@ -4,7 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.fuxiangzhang.learn_mvp_dagger2.di.NetComponent;
+import com.example.fuxiangzhang.learn_mvp_dagger2.base.app.MyApp;
+import com.example.fuxiangzhang.learn_mvp_dagger2.base.di.NetComponent;
 
 import javax.inject.Inject;
 
@@ -27,6 +28,7 @@ public abstract class BaseActivity<p extends BasePresenter> extends AppCompatAct
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getContentViewId());
+        componentInject(((MyApp)getApplication()).getNetComponent());
         initData();
         initView();
 
